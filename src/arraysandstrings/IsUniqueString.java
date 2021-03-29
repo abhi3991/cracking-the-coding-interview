@@ -1,5 +1,10 @@
 package arraysandstrings;
 
+import java.util.List;
+import java.util.function.Function;
+
+import static utils.PrintUtils.print;
+
 public class IsUniqueString {
 
     private static boolean isUnique(final String input) {
@@ -15,12 +20,12 @@ public class IsUniqueString {
     }
 
     public static void main(String[] args) {
-        print("abcc", isUnique("abcc") + "");
-        print("abcdefghijklmnopqrstuvwxyz", isUnique("abcdefghijklmnopqrstuvwxyz") + "");
-        print("a", isUnique("a") + "");
+        Function<List<String>, Boolean> toExec = (input) -> isUnique(input.get(0));
+        print(IsUniqueString.class.getName());
+
+        print(toExec, "abcc");
+        print(toExec, "abcdefghijklmnopqrstuvwxyz");
+        print(toExec, "a");
     }
 
-    public static void print(String input, String output) {
-        System.out.println(input + ": " + output);
-    }
 }
