@@ -17,6 +17,11 @@ public class PrintUtils {
         System.out.println(": " + toExec.apply(Arrays.asList(args)));
     }
 
+    public static <T, U> void print(Function<T, U> toExec, T arg) {
+        System.out.print(arg);
+        System.out.println(": " + toExec.apply(arg));
+    }
+
     public static void main(String[] args) {
         print("a", 1, 2, 3);
         print((List<Integer> inputs) -> inputs.get(0) + inputs.get(1), 1, 2);
