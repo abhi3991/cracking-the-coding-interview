@@ -2,6 +2,7 @@ package arraysandstrings;
 
 import java.util.List;
 
+import static utils.PrintUtils.execAndPrint;
 import static utils.PrintUtils.print;
 
 public class StringCompression {
@@ -34,6 +35,6 @@ public class StringCompression {
 
     public static void main(String[] args) {
         print(StringCompression.class.getName());
-        print((List<String> inputs) -> compressString(inputs.get(0)), "taabcccccaaaab");
+        execAndPrint((List<String> inputs) -> compressString(inputs.get(0)), "taabcccccaaaab");
     }
 }

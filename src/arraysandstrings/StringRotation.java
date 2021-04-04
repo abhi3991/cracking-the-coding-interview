@@ -3,6 +3,7 @@ package arraysandstrings;
 import java.util.List;
 import java.util.function.Function;
 
+import static utils.PrintUtils.execAndPrint;
 import static utils.PrintUtils.print;
 
 public class StringRotation {
@@ -18,7 +19,7 @@ public class StringRotation {
         Function<List<String>, Boolean> toExec = (inputs) -> isSubstring(inputs.get(0), inputs.get(1));
         print(StringRotation.class.getName());
 
-        print(toExec, "waterbottle", "erbottleaat");
-        print(toExec, "waterbottle", "erbottlewat");
+        execAndPrint(toExec, "waterbottle", "erbottleaat");
+        execAndPrint(toExec, "waterbottle", "erbottlewat");
     }
 }

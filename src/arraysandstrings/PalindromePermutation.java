@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static utils.PrintUtils.execAndPrint;
 import static utils.PrintUtils.print;
 
 public class PalindromePermutation {
@@ -23,6 +24,6 @@ public class PalindromePermutation {
 
     public static void main(String[] args) {
         print(PalindromePermutation.class.getName());
-        print((List<String> inputs) -> isPermutationAPalindrome(inputs.get(0)), "tact coa");
+        execAndPrint((List<String> inputs) -> isPermutationAPalindrome(inputs.get(0)), "tact coa");
     }
 }

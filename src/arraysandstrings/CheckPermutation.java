@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
+import static utils.PrintUtils.execAndPrint;
 import static utils.PrintUtils.print;
 
 public class CheckPermutation {
@@ -26,8 +27,8 @@ public class CheckPermutation {
     public static void main(String[] args) {
         Function<List<String>, Boolean> toExec = (inputs) -> isValidPermutation(inputs.get(0), inputs.get(1));
         print(CheckPermutation.class.getName());
-        print(toExec, "abc", "cba");
-        print(toExec, "absdaf", "fabsda");
-        print(toExec, "absdaf", "fabsdae");
+        execAndPrint(toExec, "abc", "cba");
+        execAndPrint(toExec, "absdaf", "fabsda");
+        execAndPrint(toExec, "absdaf", "fabsdae");
     }
 }

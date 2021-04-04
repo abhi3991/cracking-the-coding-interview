@@ -3,6 +3,7 @@ package arraysandstrings;
 import java.util.List;
 import java.util.function.Function;
 
+import static utils.PrintUtils.execAndPrint;
 import static utils.PrintUtils.print;
 
 public class IsOneAway {
@@ -51,10 +52,10 @@ public class IsOneAway {
         Function<List<String>, Boolean> toExec = (inputs) -> isOneAway(inputs.get(0), inputs.get(1));
         print(IsOneAway.class.getName());
 
-        print(toExec, "pale", "ple");
-        print(toExec, "pale", "ale");
-        print(toExec, "pales", "pale");
-        print(toExec, "pale", "bale");
-        print(toExec, "pale", "bake");
+        execAndPrint(toExec, "pale", "ple");
+        execAndPrint(toExec, "pale", "ale");
+        execAndPrint(toExec, "pales", "pale");
+        execAndPrint(toExec, "pale", "bale");
+        execAndPrint(toExec, "pale", "bake");
     }
 }

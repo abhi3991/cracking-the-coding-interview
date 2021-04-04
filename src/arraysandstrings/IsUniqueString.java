@@ -3,6 +3,7 @@ package arraysandstrings;
 import java.util.List;
 import java.util.function.Function;
 
+import static utils.PrintUtils.execAndPrint;
 import static utils.PrintUtils.print;
 
 public class IsUniqueString {
@@ -23,9 +24,9 @@ public class IsUniqueString {
         Function<List<String>, Boolean> toExec = (input) -> isUnique(input.get(0));
         print(IsUniqueString.class.getName());
 
-        print(toExec, "abcc");
-        print(toExec, "abcdefghijklmnopqrstuvwxyz");
-        print(toExec, "a");
+        execAndPrint(toExec, "abcc");
+        execAndPrint(toExec, "abcdefghijklmnopqrstuvwxyz");
+        execAndPrint(toExec, "a");
     }
 
 }
