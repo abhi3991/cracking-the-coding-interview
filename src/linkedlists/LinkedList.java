@@ -16,6 +16,10 @@ public class LinkedList<T> {
         this.head = new Node<>(data);
     }
 
+    public LinkedList(Node<T> head) {
+        this.head = head;
+    }
+
     public LinkedList(Collection<T> dataItems) {
         Iterator<T> dataIterator = dataItems.iterator();
         if (dataIterator.hasNext()) {
