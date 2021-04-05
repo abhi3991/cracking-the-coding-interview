@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class PrintUtils {
 
     public static <T> void print(T... args) {
-        System.out.println(Arrays.stream(args).map(Objects::toString).collect(Collectors.joining(", ")));
+        System.out.println(Arrays.stream(args).map(Objects::toString).collect(Collectors.joining(" ")));
     }
 
     public static <T> void print(Collection<T> collection) {
@@ -35,9 +35,18 @@ public class PrintUtils {
         System.out.println("output: " + toExec.get());
     }
 
+    public static <T> void execAndPrint(Supplier<T> toExec, Object ...args) {
+        System.out.println("input: " + toString(args));
+        System.out.println("output: " + toExec.get());
+    }
+
     public static <T> void execAndPrint(Supplier<T> toExec) {
         System.out.print("output");
         System.out.println(": " + toExec.get());
+    }
+
+    public static String toString(Object ...args) {
+        return Arrays.stream(args).map(Objects::toString).collect(Collectors.joining(", "));
     }
 
     public static void main(String[] args) {
